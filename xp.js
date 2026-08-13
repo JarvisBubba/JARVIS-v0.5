@@ -1,0 +1,1 @@
+JARVIS.v5.tools.xp=(()=>{const K='jarvis-v5-xp';const get=()=>Number(localStorage.getItem(K)||'0');function add(n){const v=get()+Number(n);localStorage.setItem(K,String(v));return v}function spend(n){const v=get();if(v<n)return false;localStorage.setItem(K,String(v-n));return true}return {get,add,spend}})();

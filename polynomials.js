@@ -1,0 +1,2 @@
+/* V5 polynomial helpers */
+window.JARVIS.v5.math.polynomials=(()=>{function analyze(s){const x=String(s).replace(/^graph\s+/i,'').trim();const terms=x.match(/[+-]?[^+-]+/g)||[];let degree=0;terms.forEach(t=>{const m=t.match(/\^\s*(\d+)/);degree=Math.max(degree,m?+m[1]:/[A-Za-z]/.test(t)?1:0)});const lead=(terms[0]||'').match(/^([+-]?\d*\.?\d*)/);return {expression:x,terms,degree,leading:lead?lead[1]||'1':'1'} }return {analyze};})();

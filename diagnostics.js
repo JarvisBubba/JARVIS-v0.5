@@ -1,0 +1,1 @@
+JARVIS.v5.admin.diagnostics=(()=>{function run(){const checks={brain:!!JARVIS.v5.brain,context:!!JARVIS.v5.context,math:!!JARVIS.v5.math,academics:!!JARVIS.v5.academics,tools:!!JARVIS.v5.tools,admin:!!JARVIS.v5.admin};return checks}return {run}})();

@@ -1,0 +1,1 @@
+JARVIS.v5.tools.voice=(()=>{function speak(t){try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(String(t));u.rate=1.0;u.pitch=.92;speechSynthesis.speak(u)}catch(e){}}return {speak}})();

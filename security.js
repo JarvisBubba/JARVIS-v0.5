@@ -1,0 +1,1 @@
+JARVIS.v5.admin.security=(()=>{const K='jarvis-v5-access-lock';function locked(){return localStorage.getItem(K)==='1'}function setLock(v){localStorage.setItem(K,v?'1':'0');return v}return {locked,setLock}})();

@@ -1,0 +1,4 @@
+/* V5 quadratics */
+window.JARVIS.v5.math.quadratics=(()=>{function solve(a,b,c){const d=b*b-4*a*c;if(a===0)return null;if(d<0){const r=-b/(2*a),i=Math.sqrt(-d)/(2*a);return {discriminant:d,roots:[`${r} + ${i}i`,`${r} - ${i}i`]}}const s=Math.sqrt(d);return {discriminant:d,roots:[(-b+s)/(2*a),(-b-s)/(2*a)]}}
+function from(eq){const m=String(eq).match(/([+-]?\d*\.?\d*)x\^2\s*([+-]\s*\d*\.?\d*)x\s*([+-]\s*\d*\.?\d*)\s*=\s*([+-]?\s*\d*\.?\d*)/i);if(!m)return null;const cv=z=>{z=z.replace(/\s/g,'');if(z==='+'||z==='')return 1;if(z==='-')return -1;return Number(z)};const a=cv(m[1]),b=cv(m[2]),c=cv(m[3])-Number(m[4].replace(/\s/g,''));const r=solve(a,b,c);return r?{a,b,c,...r,steps:[eq,`Discriminant = ${b}² - 4(${a})(${c}) = ${r.discriminant}`,`x = (-${b} ± √${r.discriminant}) / ${2*a}`,`Solutions: ${r.roots.join(', ')}`]}:null}
+return {solve,from};})();
